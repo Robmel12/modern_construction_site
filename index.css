@@ -1,0 +1,24 @@
+/* variables */
+:root{
+    --transition-enter: .9s ease;
+    --transition-exit: .8s ease;
+    /* colors */
+    --color1: #89375F;
+    --color2: #CE5959;
+    --color3: #BACDDB;
+    --color4: #F3E8FF;
+    --color5: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(137,55,95,1) 0%, rgba(206,89,89,1) 100%);
+
+
+}
+/* presets */
+body{
+    background-color: black;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Garamond', 'Times New Roman', Times, serif, 'Arial Narrow', Arial, sans-serif
+}
+li, a{
+    list-style: none;
+    text-decoration: none;
+}
