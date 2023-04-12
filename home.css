@@ -1,19 +1,23 @@
 /* home page */
-@media screen and (max-width: 813px) {
+@media screen and (max-width: 813px){
     .home-image-main{
         display: none;
     }
-    div.home-keywords{
+}
+@media screen and (max-width: 813px) and (min-width: 601px){
+  
+    div.home-keywords h1 span, div.home-keywords span .home-logo{
         font-size: 3rem;
     }
-    .home-logo{
+    img.home-logo{
        align-self: center;
        margin-bottom: 50px;
-        width: 50%;
+        width: 100%;
+        height: 100%;
     }
 }
 @media screen and (max-width: 600px) {
-    div.home-keywords{
+    div.home-keywords span{
         font-size: 2.5rem;
     }
 }
@@ -39,7 +43,7 @@ div.background-image{
     background: linear-gradient(324deg, rgba(0,0,0,0.7497592787114846) 42%, rgba(0,0,0,0.321187850140056) 100%);
     min-height: 516px;
 }
-.home-image-main-container{
+.home-content{
     position: relative;
     top:0;
     display: grid;
@@ -55,10 +59,8 @@ div.background-image{
     margin-left: 10px;
     filter: contrast(150%);
     filter: saturate(150%);
-    width: 100%;
-    height: 85%;
-    grid-column: 4/6;
-    grid-row: 1/2;
+    height: 600px;
+    width: 600px;
     z-index: 1;
     object-fit: cover;
 }
@@ -69,18 +71,34 @@ div.background-image{
     grid-column: 2/4;
     grid-row: 1/2;
     color: var(--color4);
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin: 0;
     z-index: 2;
 }
-/* .home-keywords h1{
+.home-keywords h1{
     margin: 0;
-    transform: translateX(100px);
-} */
+}
+
+.home-keywords h1 span{
+    font-size: 6rem;
+}
+
 .home-logo{
-    width: 50%;
+         width: 50%;
+         height: 20%;
+     
+}
+.fade{
+    opacity: 0;
+    transition: 1s ease;
+}
+.fade.active{
+    opacity: 1;
+    transition: 1s ease;
 }
 .hl{
-    transform: translateX(100px);
+    transform: translateX(50px);
+    margin-top: 50px;
    width: 20%;
    border-bottom: 1px solid var(--color4);
 }
@@ -88,4 +106,57 @@ div.background-image{
     height: 100%;
     min-height: 516px;
 
+}
+.curtain{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: black;
+}
+.curtain.active{
+    transform: translateX(100vw);
+      animation: hideNav 1s ease 1.03s 1 normal forwards;
+      transition: 1s ease;
+}
+.overflow{
+    width: 0;
+    overflow: hidden;
+}
+.overflow.active{
+    width: 100%;
+    transform-origin: right center;
+    transition: .7s ease;
+}
+.home-image-main-container.overflow.active{
+    width: 500px;
+}
+.home-image-main-container{
+    right:0;
+    height: 85%;
+    grid-column: 4/6;
+    grid-row: 1/2;
+}
+.nudge.right{
+    transform: translateX(-100px);
+    transition: .7s ease;
+}
+.nudge.left{
+    transform: translateX(50px);
+    transition: transform .5s ease;
+}
+.nudge.active{
+    transform: translate(0);
+    transition: transform .7s ease;
+}
+.home-image-main.nudge.active{
+    translate: (-10px);
+    transition: transform .5s ease-in-out;
+}
+.grow{
+    width: 0;
+}
+.grow.active{
+    width: 20%;
+    transition: .8s ease;
 }

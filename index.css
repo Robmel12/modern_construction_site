@@ -12,10 +12,11 @@
 
 }
 /* presets */
-body{
+html, body{
     background-color: black;
     margin: 0;
-    overflow-x: hidden;
+    position:relative;
+	overflow-x:hidden;
     font-family: 'Garamond', 'Times New Roman', Times, serif, 'Arial Narrow', Arial, sans-serif
 }
 li, a{

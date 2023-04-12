@@ -9,7 +9,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-  <script src="./nav.js"></script>
+  <script src="./nav.js" language="JavaScript" defer type="module"></script> 
+  <script src="./home.js" language="JavaScript" defer type="module"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/regular.min.js" integrity="sha512-RNA9D6w1BGWFIVSGkGBsEEgVxoGNu7mtLZ+QQvwvoZHJHyoK19FF5R4xeM4AmdzreiwRzu8r0Xs89kFrOPh2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./nav.css"/>
@@ -30,7 +31,7 @@
         </img>
         <nav id="main-nav" >
             <img src="./images/homeMakersLogo.png" class="mobile-logo">
-            <ul class="rotateIn">
+            <ul class="nav-menu moveIn rotate">
                 <li class="nav-link"><a><span>Home</span></a></li>
                 <li class="nav-link"><a><span>Projects</span></a></li>
                 <li class="nav-link"><a><span>About Us</span></a></li>
@@ -50,7 +51,7 @@
     </div>
         
         <div id="featured-image-overflow" onmouseover="imgBackgroundChange(event);" onmouseout="imgBackgroundChange(event);">
-            
+               
             <div id="featured-image-container"><img src='./images/homeMakersLogo.png'id="nav-logo"></img><div id="featured-image"></div>
             <div id="featured-image-background"></div>
             <div id="featured-image-title"><h3 >Feature Project</h3>
@@ -71,27 +72,31 @@
     </header>
     <main>
     <section class="home">
+        <div class="curtain"></div>
         <div class="home-container">
-        <div class="background-image">
+        <div class="background-image nudge right">
         
         
     </div>
     <div class="background-gradient"></div>
-    <div class="home-image-main-container">
+    <div class="home-content">
         <div class="home-keywords">
-        <img class='home-logo' src="./images/homeMakersLogo.png">
-    <div class="rotateIn">
-    <h1>Craftsmanship</h1>
-    <h1>Heritage</h1>
-    <h1>Integrity</h1>
+      <span class="fade"><img class='home-logo' src="./images/homeMakersLogo.png"></span>
+    <div class="rotate">
+    <h1><span>Craftsmanship</span></h1>
+    <h1><span>Heritage</span></h1>
+    <h1><span>Integrity</span></h1>
     </div>
-    <div class="hl"></div>
+    <div class="hl grow"></div>
 </div>
-    <img class='home-image-main' src="./images/pexels-expect-best-323780.jpg"/>
+    <div class="home-image-main-container overflow">
+    <img class='home-image-main nudge left' src="./images/pexels-expect-best-323780.jpg"/>
+</div>
 </div>
 </div>
 </section>
 </main>
+
 </body>
 
 </html>
