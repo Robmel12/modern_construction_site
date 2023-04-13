@@ -13,3 +13,7 @@
     width: 80%;
     height: var( --hamburger-bar-size);
 }
+.nav-menu{
+    width: 500px;
+    height: 500px;
+}

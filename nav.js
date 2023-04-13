@@ -1,4 +1,6 @@
-import { rotate } from "./animation.js";
+import { hide, rotate } from "./animation.js";
 function toggleNav(){
-    console.log('toggle');
+    rotate('.nav-menu', 'li', '15deg', .2);
+    hide('.nav-menu', 'li');
 }
+window.toggleNav = toggleNav;
