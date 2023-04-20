@@ -5,38 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
   <script src="./nav.js" language="JavaScript" defer type="module" ></script> 
   <script src="./home.js" language="JavaScript" defer type="module"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/regular.min.js" integrity="sha512-RNA9D6w1BGWFIVSGkGBsEEgVxoGNu7mtLZ+QQvwvoZHJHyoK19FF5R4xeM4AmdzreiwRzu8r0Xs89kFrOPh2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  
     <link rel="stylesheet" href="./nav.css"/>
     <link rel="stylesheet" href="./index.css"/>
     <link rel="stylesheet" href="./home.css "/>
 </head>
 <body>
     <header>
+        <div class="hamburger" onclick="toggleNav(event);">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <nav class="nav">
-            <div class="hamburger" onclick="toggleNav(event);">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="nav-meun-container">
-                <ul class="nav-menu">
-                    <li><span>Home</span></li>
-                    <li><span>Projects</span></li>
-                    <li><span>About Us</span></li>
-                    <li><span>Contact Us</span></li>
+            
+            <div class="nav-menu-container">
+                <ul class="nav-menu moveUp">
+                    <li class="fade rotateOut moveUp"><span>Home</span></li>
+                    <li class="fade rotateOut moveUp"><span>Projects</span></li>
+                    <li class="fade rotateOut moveUp"><span>About Us</span></li>
+                    <li class="fade rotateOut moveUp"><span>Contact Us</span></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-
+    <main>
+        <section class="home">
+            <div class="home-background-image nudge right"></div>
+            <div class="home-curtain curtain left active"></div>
+            <div class="home-image-container reveal right">
+            <picture alt="Picture of a building." >
+            <source srcset="./images/pexels-scott-webb-1022936.jpg">
+            <img class='nudge left' src="./images/pexels-scott-webb-1022936.jpg" alt="Picture of a building.">   
+            </picture>
+            </div>
+            <div class="home-words-container">
+                <div>
+                <h1 class="fade rotateOut moveUp"><span>Heritage</span></h1>
+                <h1 class="fade rotateOut moveUp"><span>Craftsmanship</span></h1>
+                <h1 class="fade rotateOut moveUp"><span>Mastery</span></h1>
+            </div>     
+            </div>  
+            
+        </section>
+    </main>
 
 
 </body>

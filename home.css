@@ -1,162 +1,66 @@
 /* home page */
-@media screen and (max-width: 813px){
-    .home-image-main{
-        display: none;
-    }
-}
-@media screen and (max-width: 813px) and (min-width: 601px){
-  
-    div.home-keywords h1 span, div.home-keywords span .home-logo{
-        font-size: 3rem;
-    }
-    img.home-logo{
-       align-self: center;
-       margin-bottom: 50px;
-        width: 100%;
-        height: 100%;
-    }
-}
-@media screen and (max-width: 600px) {
-    div.home-keywords span{
-        font-size: 2.5rem;
-    }
-}
-
-main{
-    z-index: 0;
-}
-div.background-image{
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('./images/pexels-expect-best-323780.jpg');
-    background-size: cover;
-    min-height: 516px;
-    z-index: -1;
-}
-.background-gradient{
-    top:0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(324deg, rgba(0,0,0,0.7497592787114846) 42%, rgba(0,0,0,0.321187850140056) 100%);
-    min-height: 516px;
-}
-.home-content{
-    position: relative;
-    top:0;
+.home{
+    
     display: grid;
-    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
-    grid-template-rows: 100%;
+    grid-template-columns: 5vw 30vw 30vw 30vw 5vw;
+    grid-template-rows: 50vh 50vh;
     align-items: center;
-    justify-items: center;
-    width: 100%;
-    height: 100vh;
-    min-height: 516px;
+    justify-content: center ;
 }
-.home-image-main{
-    margin-left: 10px;
-    filter: contrast(150%);
-    filter: saturate(150%);
-    height: 600px;
-    width: 600px;
-    z-index: 1;
+.home-image-container{
+    grid-column: 3/5;
+    grid-row: 1/3;
     object-fit: cover;
+    overflow: hidden;
+    transition: all 3s ease;
+    
 }
-.home-keywords{
+.home-image-container img{
+    width: 40vw;
+    height: 40vw;
+    object-fit: cover;
+    transition: transform 1s ease;
+    overflow: hidden;
+}   
+
+.home-image-container img.nudge.left{
+transform: translateX(-20px);
+}
+.home-image-container img.nudge.active{
+transform: translateX(-40px);
+}
+
+.home-words-container{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     grid-column: 2/4;
-    grid-row: 1/2;
-    color: var(--color4);
-    font-size: 3.5rem;
-    margin: 0;
-    z-index: 2;
+    grid-row: 1/3;
+    
 }
-.home-keywords h1{
-    margin: 0;
+.home-words-container div h1{
+    
+    transition: all 1s ease;  
 }
-
-.home-keywords h1 span{
-    font-size: 6rem;
+.home-words-container div h1 span{
+    font-size: 4rem;
 }
-
-.home-logo{
-         width: 50%;
-         height: 20%;
-     
-}
-.fade{
-    opacity: 0;
-    transition: 1s ease;
-}
-.fade.active{
-    opacity: 1;
-    transition: 1s ease;
-}
-.hl{
-    transform: translateX(50px);
-    margin-top: 50px;
-   width: 20%;
-   border-bottom: 1px solid var(--color4);
-}
-.home-container{
+.home-curtain{
+    position: absolute;
+    width: 100%;
     height: 100%;
-    min-height: 516px;
-
+    background-color: black;
+    z-index: 99999;
+    transition: transform 1s var(--fast-slow-transition);
 }
-.curtain{
+.home-background-image{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    z-index: 9999;
-    background-color: black;
-}
-.curtain.active{
-    transform: translateX(100vw);
-      animation: hideNav 1s ease 1.03s 1 normal forwards;
-      transition: 1s ease;
-}
-.overflow{
-    width: 0;
-    overflow: hidden;
-}
-.overflow.active{
-    width: 100%;
-    transform-origin: right center;
-    transition: .7s ease;
-}
-.home-image-main-container.overflow.active{
-    width: 500px;
-}
-.home-image-main-container{
-    right:0;
-    height: 85%;
-    grid-column: 4/6;
-    grid-row: 1/2;
-}
-.nudge.right{
-    transform: translateX(-100px);
-    transition: .7s ease;
-}
-.nudge.left{
-    transform: translateX(50px);
+    background-image: url('./images/pexels-scott-webb-1022936.jpg');
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: 50%;
+    opacity: .5;
     transition: transform .5s ease;
-}
-.nudge.active{
-    transform: translate(0);
-    transition: transform .7s ease;
-}
-.home-image-main.nudge.active{
-    translate: (-10px);
-    transition: transform .5s ease-in-out;
-}
-.grow{
-    width: 0;
-}
-.grow.active{
-    width: 20%;
-    transition: .8s ease;
 }

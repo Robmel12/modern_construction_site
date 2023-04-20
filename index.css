@@ -13,6 +13,7 @@
     --hamburger-color: grey;
     --hamburger-bar-color-clicked: white;
     --hamburger-bar-color-unclicked: black;
+    --fast-slow-transition: cubic-bezier(0,.13,0,1.01);
 
 }
 /* presets */
@@ -27,4 +28,64 @@ html, body{
 li, a{
     list-style: none;
     text-decoration: none;
+}
+.show{
+visibility: hidden;
+}
+.show.active{
+    visibility: visible;
+}
+.fade{
+    opacity: 0;
+}
+.fade.active
+{
+    opacity: 1;
+}
+.moveUp{
+    transform: translateY(100vh);
+}
+.moveUp.active{
+    transform: translateY(0);
+}
+.rotateOut{
+    rotate: -15deg;
+}
+.rotateOut.active{
+rotate: 0deg;
+}
+.nudge.right{
+    transform: translate(-30px);
+}
+/* .nudge.left{
+    transform: translate(10px);
+} */
+.nudge.active{
+    transform: translateX(0);
+}
+.curtain.right{
+    transform: translateX(-100vw);
+}
+.curtain.left{
+    transform: translateX(100vw);
+}
+.curtain.lift{
+    transform: translateY(100vh);
+}
+.curtain.drop{
+    transform: translateY(-100vh);
+}
+.curtain.active{
+    transform: translate(0,0);
+}
+.reveal{
+    width: 0%;
+    
+}
+.reveal.right{
+    transform: translateX(100%);
+}
+.reveal.active{
+    width: 100%;
+    transform: translateX(0);
 }

@@ -1,4 +1,11 @@
+.nav{
+    position: fixed;
+    z-index: 9999;
+}
 .hamburger{
+    right: 0;
+    top: 50%;
+    position: absolute;
     display: flex;
     flex-direction:  column;
     justify-content: space-evenly;
@@ -6,6 +13,7 @@
     background-color: var(--hamburger-color);
     width: var(--hamburger-size);
     height: var(--hamburger-size);
+    z-index: 9999;
 }
 .hamburger .bar{
     display: block;
@@ -14,6 +22,31 @@
     height: var( --hamburger-bar-size);
 }
 .nav-menu{
+    transform: translate3d(0, 110%, 0);
+    visibility: visible;
+    display: block;
     width: 500px;
     height: 500px;
+    margin: 0;
+    transition: transform 1s ease;
+}
+.nav-menu li.moveUp{
+    transform: translateY(50px);
+}
+.nav-menu li.moveUp.active{
+    transform: translateY(0);
+}
+.nav-menu.active{
+
+    transition: transform 1s ease;
+}
+.nav-menu li{
+    transition: all 1s ease;
+}
+
+.nav-menu-container{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
